@@ -1,0 +1,19 @@
+name: ramp-physical-activity-prediction
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - numpy
+  - scipy
+  - pandas>=0.23
+  - scikit-learn>=0.20
+  - pyarrow
+  - imbalanced-learn
+  - matplotlib
+  - joblib
+  - lightgbm
+
+  - pip
+  - pip:
+      - ramp-workflow
+      - osfclient
