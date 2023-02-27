@@ -1,6 +1,7 @@
 from sklearn.base import BaseEstimator
 from sklearn.pipeline import make_pipeline
 from sklearn.linear_model import LogisticRegression
+import pandas as pd
 
 def compute_moving_average(X_df, feature, time_window, center=False):
     """
@@ -32,8 +33,6 @@ def compute_lagged_features(X_df, feature, lag_value):
     X_cop[name] = X_cop[feature].shift(lag_value)
     X_cop[name] = X_cop[name].ffill().bfill()
     return X_cop
-
-
 
 
 class FeatureExtractor(BaseEstimator):

@@ -7,8 +7,6 @@ import pandas as pd
 import warnings
 from sklearn.model_selection import train_test_split
 
-warnings.filterwarnings("ignore", category=FutureWarning)
-#warnings.filterwarnings("ignore", category=pd.errors.SettingWithCopyWarning)
 def dataCleaning(dataCollection):
     # removing all entries with activity labeled as 0 (transient activity)
     dataCollection = dataCollection.drop(dataCollection[dataCollection.activityID == 0].index)
