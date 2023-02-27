@@ -11,13 +11,6 @@ class FeatureExtractor(BaseEstimator):
     def transform(self, X):
         return X
 
-class classifier(LogisticRegression):
-    
-    
-    def predict_proba(self,X):
-        print("hello1")
-        y_pred = super().predict_proba(X)
-        return y_pred
 
 
 def get_estimator():
