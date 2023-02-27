@@ -1,9 +1,6 @@
 from sklearn.base import BaseEstimator
 from sklearn.pipeline import make_pipeline
 from sklearn.linear_model import LogisticRegression
-from sklearn.preprocessing import StandardScaler , MinMaxScaler
-import numpy as np
-import pandas as pd
 
 def compute_moving_average(X_df, feature, time_window, center=False):
     """
